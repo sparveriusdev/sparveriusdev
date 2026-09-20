@@ -52,6 +52,51 @@ Currently building **SkyMapStories** - capturing stunning aerial perspectives an
 
 ## 🏆 Featured Projects
 
+---
+### 📡 **Alertas Sísmicas Colombia** - Meshtastic Earthquake & Volcano Alert System
+  <img src="https://img.shields.io/badge/Platform-Windows%20|%20Linux%20|%20Android-lightgrey?style=flat" />
+
+  Real-time seismic/volcanic alert notifier for Colombia, delivered over your own Meshtastic LoRa mesh — no cell signal or internet required:
+  - 🛰️  Live polling of Colombia's official SGC feed, with automatic failover to USGS if it goes down
+  - 📻 Meshtastic LoRa notifications with tap-to-build message templates (magnitude, location, agency, etc.)
+  - 🗺️  Interactive live map color-coded by the same alert severity scale as the SGC
+  - 📡 Optional MQTT bridge to extend alerts beyond the local mesh
+  - 💾 Persistent SQLite history of every event, exportable anytime
+
+  **Technologies**: Python, Flet, Meshtastic, MQTT, SQLite, PyInstaller
+
+  [🔗 View Repository](https://github.com/sparveriusdev/AlertasSismosColombia)
+
+  ---
+
+### 🌧️  **InterporApp** - Hydrometeorological Interpolation Suite for IDEAM Data
+  <img src="https://img.shields.io/badge/Platform-Windows-lightgrey?style=flat" />
+
+  Desktop tool that spatializes and interpolates hydrometeorological variables from Colombia's IDEAM network — turns point measurements from scattered stations into continuous
+  surfaces:
+  - 📐 IDW, Ordinary Kriging and Universal Kriging, with optional DEM covariate for Universal Kriging
+  - ✅ Automatic LOOCV cross-validation with metric reports on every run
+  - 🗂️  Reads `.data` files + the CNE (Catálogo Nacional de Estaciones) to generate GeoPackage (GPKG) and GeoTIFF rasters
+  - ✂️  AOI clipping (KML/KMZ/SHP/GPKG/GeoJSON) with automatic extent adjustment
+  - ⚡ Parallel batch processing with pause/stop controls
+
+  **Technologies**: Python, [confirm: GDAL/Rasterio? GeoPandas? PyKrige?], concurrent.futures
+
+  [🔗 View Repository](https://github.com/sparveriusdev/interporapp)
+  [📖 Read the article](https://skymapstories.com/blog/posts/geoestadistica-interpolacion-idw-kriging/)
+
+### ✈️  **ADS-B Analyzer** - RAW Flight Data Decoder & GIS Export Tool
+  <img src="https://img.shields.io/badge/Platform-Windows%20|%20macOS%20|%20Linux-lightgrey?style=flat" />
+
+  CLI tool that decodes RAW ADS-B recordings from SDRAngel, computes real AGL (above-ground-level) altitude against a DEM, and exports ready-to-use GIS layers:
+  - 📡 Decodes raw ADS-B frames into per-flight tracks (pyModeS)
+  - 🏔️  Real AGL altitude from a SRTM/DEM GeoTIFF, with a fallback fixed elevation
+  - 🗺️  Exports GeoPackage (points, trajectories, phase-colored segments), 3D KML for Google Earth, and per-flight CSVs
+  - 📊 Auto-generated AGL/MSL profile charts per flight and per session
+  - 🧭 Filter by ICAO, minimum position count, CRS (e.g. EPSG:9377 MAGNA-SIRGAS), and more via CLI flags
+
+  **Technologies**: Python, pyModeS, GeoPandas, Rasterio, Shapely, Fiona, Matplotlib, Click, Rich
+
 ### 🎯 **TipologIA** - AI Cadastral Recognition System
 <img src="https://img.shields.io/badge/Status-Production-success?style=flat" /> <img src="https://img.shields.io/badge/LADM--COL-Compliant-blue?style=flat" />
 
@@ -67,9 +112,9 @@ Currently building **SkyMapStories** - capturing stunning aerial perspectives an
 
 [🔗 View Project](https://github.com/SESMAPS/Tipologia)
 
----
 
-### 📱 **Mini 3 App** - DJI Mini 3 Utilities Suite
+
+### 📱 **Mini 3 App** - DJI Mini 3/4/5 M3E Utilities Suite
 <img src="https://img.shields.io/badge/Platform-Windows%20|%20macOS%20|%20Linux-lightgrey?style=flat" />
 
 Professional toolkit for DJI Mini 3 drone operations:
@@ -223,7 +268,7 @@ If you find my projects useful, consider supporting my work:
 
 ☕ **Buy Me a Coffee**: [buymeacoffee.com/sparverius](https://buymeacoffee.com/sparverius)
 
-💎 **IOTA Donations**: `iota1qrpcz2cjenl5j887yg0yr4537wld5pcqtpzmd0ghj5x06fwajpjhugtzvq0`
+💎 **IOTA Donations**: `0xc3812b12ccff491cfe221e41d691f3beda07005845b6bd17950cfd25dd90657e`
 
 ---
 
